@@ -6,7 +6,7 @@
 ![MAIN_DEMO](https://s8.gifyu.com/images/b64-single_CROP.gif)
 
 # Batch mode
-![MAIN_DEMO2](https://s8.gifyu.com/images/b64-batch_CROP.gif)
+![MAIN_DEMO2](https://s8.gifyu.com/images/b64-batchmode_CROP.gif)
 
 # How to install it
 There is no installation needed.
