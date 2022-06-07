@@ -1,8 +1,6 @@
 import importlib.util
 import os
 
-import PySimpleGUI as sg
-
 import app
 
 
@@ -21,7 +19,6 @@ def main(application: app.Controller) -> None:
 
 if __name__ == '__main__':
     close_splash()
-    sg.theme('DarkBlue1')
     view = app.MAIN_VIEW()
     controller = app.Controller(view)
     main(controller)

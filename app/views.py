@@ -2,6 +2,7 @@ import PySimpleGUI as sg
 
 from . import txt
 
+sg.theme('DarkBlue1')
 
 def MAIN_VIEW() -> sg.Window:
     modes_layout = [
