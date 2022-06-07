@@ -1,7 +1,7 @@
 OUT_FILE = '_output.py'
 
-APP_TITLE = 'Base64 Encoder'
-HEADING = f'Base64 images encoder'
+APP_TITLE = 'Make me Base64 v1.0'
+HEADING = f'Make me Base64'
 
 GENERATED = (
     f'Done!\nEncoded %s files.\n'

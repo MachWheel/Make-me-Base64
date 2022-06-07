@@ -1,9 +1,11 @@
-import PySimpleGUI as sg
+import importlib.util
 import os
 
+import PySimpleGUI as sg
+
+import _app
 import _txt
 import _view
-import _app
 
 
 def main():
@@ -78,6 +80,16 @@ def run_batch(folder, images):
     _view.MESSAGE(_txt.GENERATED % len(images))
     os.startfile(folder)
 
+
+def close_splash():
+    if '_PYIBoot_SPLASH' in os.environ:
+        if not importlib.util.find_spec("pyi_splash"):
+            return
+        import pyi_splash
+        pyi_splash.close()
+
+
 if __name__ == '__main__':
+    close_splash()
     sg.theme('DarkBlue1')
     main()
