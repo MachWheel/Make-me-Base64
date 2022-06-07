@@ -5,8 +5,16 @@
 # Single mode
 ![MAIN_DEMO](https://s8.gifyu.com/images/b64-single_CROP.gif)
 
+- Open the app
+- Choose an image
+- Paste the string
+
 # Batch mode
 ![MAIN_DEMO2](https://s8.gifyu.com/images/b64-batchmode_CROP.gif)
+
+- Open the app
+- Choose a folder
+- Check **"__output.py_"** file
 
 # How to install it
 There is no installation needed.
