@@ -1,7 +1,7 @@
 import base64
 import os
 
-import _txt
+from . import txt
 
 
 def read_images(folder) -> list[str]:
@@ -26,6 +26,6 @@ def clean_file_name(file_name):
 
 
 def write_contents(folder: str, contents: list[str]):
-    output_path = os.path.join(folder, _txt.OUT_FILE)
+    output_path = os.path.join(folder, txt.OUT_FILE)
     with open(output_path, 'w') as file:
         [file.write(line) for line in contents]
