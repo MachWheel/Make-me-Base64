@@ -53,7 +53,7 @@ class Controller:
         folder = values['-FOLDER_IN-']
         images = worker.read_images(folder)
         if not images:
-            views.MESSAGE(txt.NO_IMGS)
+            views.MSG_POPUP(txt.NO_IMGS)
             self.view.un_hide()
             return None, None
         return folder, images
@@ -63,7 +63,7 @@ class Controller:
         file = values['-FILE_IN-']
         encoded = worker.get_base64(file)
         sg.clipboard_set(encoded)
-        views.MESSAGE(txt.COPIED)
+        views.MSG_POPUP(txt.COPIED)
         self.view.un_hide()
 
 
@@ -77,5 +77,5 @@ def run_batch(folder: str, images: list) -> None:
         contents.append(line)
         views.PROGRESS(n, loaded)
     worker.write_contents(folder, contents)
-    views.MESSAGE(txt.GENERATED % len(images))
+    views.MSG_POPUP(txt.GENERATED % len(images))
     os.startfile(folder)

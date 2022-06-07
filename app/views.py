@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 from . import txt
 
 
-def MAIN_VIEW():
+def MAIN_VIEW() -> sg.Window:
     modes_layout = [
         [sg.Radio(
             'Single file to clipboard', '_',
@@ -57,7 +57,7 @@ def MAIN_VIEW():
     return sg.Window(txt.APP_TITLE, layout, font=txt.F10B, icon=_LOGO(), finalize=True)
 
 
-def PROGRESS(curr_val, max_val):
+def PROGRESS(curr_val: int, max_val: int) -> sg.OneLineProgressMeter:
     return sg.OneLineProgressMeter(
         title='',
         current_value=curr_val + 1,
@@ -67,7 +67,7 @@ def PROGRESS(curr_val, max_val):
         orientation='h'
     )
 
-def MESSAGE(msg):
+def MSG_POPUP(msg: str) -> sg.Popup:
     return sg.popup(f'\n{msg}\n', font=txt.F12B, no_titlebar=True)
 
 def _LOGO() -> bytes:

@@ -6,14 +6,14 @@ import PySimpleGUI as sg
 import app
 
 
-def close_splash():
+def close_splash() -> None:
     if '_PYIBoot_SPLASH' in os.environ:
         if not importlib.util.find_spec("pyi_splash"):
             return
         import pyi_splash
         pyi_splash.close()
 
-def main(application: app.Controller):
+def main(application: app.Controller) -> None:
     state = ''
     while state != 'done':
         state = application.read_events()
